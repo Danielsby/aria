@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aria</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+    <h1>Aria</h1>
+
+    <article aria-live="assertive">Lorem ipsum dolor sit amet, consectetur adipiscing elit</article>
+
+    <div aria-live="polite">
+        <h2>Reviews</h2>
+        <div class="message">
+            <label id="maria">Maria:</label>
+            <p title="comment" aria-readonly="false" aria-labelledby="maria">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+    </div>
+
+    <button onclick={showError()}>Enter Email</button>
+
+    <p>
+        <label for="email">Email Address</label>
+        <input
+                type="email"
+                name="email"
+                min="0"
+                max="30"
+                id="email"
+                aria-invalid="false"
+                aria-errormessage="errl"
+                required
+        >
+        <span id="errl" class="errormessage">Error: Enter a valid email address</span>
+    </p>
+</header>
+
+</body>
+</html>
+<script src="index.js"></script>
